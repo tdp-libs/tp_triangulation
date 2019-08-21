@@ -12,15 +12,15 @@ namespace tp_triangulation
 {
 
 //##################################################################################################
-struct Contour
+struct TP_TRIANGULATION_SHARED_EXPORT Contour
 {
-  std::vector<glm::vec3> vertices;
+    std::vector<glm::vec3> vertices;
 };
 
 //##################################################################################################
-struct Polygon
+struct TP_TRIANGULATION_SHARED_EXPORT Polygon
 {
-  std::vector<Contour> contours;
+    std::vector<Contour> contours;
 };
 
 //##################################################################################################
@@ -41,11 +41,11 @@ be set to GL_TRIANGLE_FAN, GL_TRIANGLE_STRIP, and GL_TRIANGLES respectivly.
 
 \return True if all went well.
 */
-bool triangulate(const std::vector<Polygon>& srcData,
-                 int triangleFan,
-                 int triangleStrip,
-                 int triangles,
-                 std::map<int, std::vector<Contour>>& resultVerts);
+bool TP_TRIANGULATION_SHARED_EXPORT triangulate(const std::vector<Polygon>& srcData,
+                                                int triangleFan,
+                                                int triangleStrip,
+                                                int triangles,
+                                                std::map<int, std::vector<Contour>>& resultVerts);
 
 }
 
