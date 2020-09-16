@@ -37,7 +37,7 @@ bool triangulate(const std::vector<Polygon>& srcData,
     ClipperLib::Paths out_polys;
     {
       ClipperLib::Path in_poly;
-      for(const glm::vec3& vert : contour.vertices)
+      for(const auto& vert : contour.vertices)
         in_poly.push_back(ClipperLib::IntPoint(ClipperLib::cInt(vert.x*scale), ClipperLib::cInt(vert.y*scale)));
 
       ClipperLib::SimplifyPolygon(in_poly, out_polys, ClipperLib::pftNonZero);
@@ -69,7 +69,7 @@ bool triangulate(const std::vector<Polygon>& srcData,
         for(size_t p : mapbox::earcut<size_t>(polygon))
         {
           Point& pt = poly[p];
-          packedTriangles.vertices.emplace_back(glm::vec3(pt[0], pt[1], 0.0f));
+          packedTriangles.vertices.emplace_back(glm::vec2(pt[0], pt[1]));
         }
       }
 

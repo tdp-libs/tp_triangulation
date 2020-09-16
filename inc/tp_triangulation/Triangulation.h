@@ -14,13 +14,13 @@ namespace tp_triangulation
 //##################################################################################################
 struct TP_TRIANGULATION_SHARED_EXPORT Contour
 {
-    std::vector<glm::vec3> vertices;
+  std::vector<glm::vec2> vertices;
 };
 
 //##################################################################################################
 struct TP_TRIANGULATION_SHARED_EXPORT Polygon
 {
-    std::vector<Contour> contours;
+  std::vector<Contour> contours;
 };
 
 //##################################################################################################
