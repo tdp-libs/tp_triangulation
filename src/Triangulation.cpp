@@ -37,6 +37,7 @@ bool triangulate(const std::vector<Polygon>& srcData,
     ClipperLib::Paths out_polys;
     {
       ClipperLib::Path in_poly;
+      in_poly.reserve(contour.vertices.size());
       for(const auto& vert : contour.vertices)
         in_poly.push_back(ClipperLib::IntPoint(ClipperLib::cInt(vert.x*scale), ClipperLib::cInt(vert.y*scale)));
 
