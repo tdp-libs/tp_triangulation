@@ -3,7 +3,7 @@
 
 #include "tp_triangulation/Globals.h"
 
-#include "glm/glm.hpp"
+#include "glm/glm.hpp" // IWYU pragma: keep
 
 #include <vector>
 #include <map>

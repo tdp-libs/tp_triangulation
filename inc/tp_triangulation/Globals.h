@@ -1,7 +1,7 @@
 #ifndef tp_triangulation_Globals_h
 #define tp_triangulation_Globals_h
 
-#include "tp_utils/StringID.h"
+#include "tp_utils/Globals.h" // IWYU pragma: keep
 
 #if defined(TP_TRIANGULATION_LIBRARY)
 #  define TP_TRIANGULATION_SHARED_EXPORT TP_EXPORT

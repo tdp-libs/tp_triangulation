@@ -1,7 +1,6 @@
 #include "tp_triangulation/Triangulation.h"
 
 #include "tp_utils/Globals.h"
-#include "tp_utils/DebugUtils.h"
 
 #include "clipper.hpp"
 
