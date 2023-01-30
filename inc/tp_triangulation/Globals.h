@@ -4,9 +4,9 @@
 #include "tp_utils/Globals.h" // IWYU pragma: keep
 
 #if defined(TP_TRIANGULATION_LIBRARY)
-#  define TP_TRIANGULATION_SHARED_EXPORT TP_EXPORT
+#  define TP_TRIANGULATION_EXPORT TP_EXPORT
 #else
-#  define TP_TRIANGULATION_SHARED_EXPORT TP_IMPORT
+#  define TP_TRIANGULATION_EXPORT TP_IMPORT
 #endif
 
 //##################################################################################################
